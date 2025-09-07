@@ -1,0 +1,20 @@
+### Crear un rectangulo
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+  "base": 5,
+  "altura": 10
+}
+
+### Crear un cuadrado
+POST http://localhost:3000/rectangulos
+Content-Type: application/json
+
+{
+  "base": 4,
+  "altura": 4
+}
+
+### Consultar calculos
+GET http://localhost:3000/rectangulos
