@@ -1,0 +1,40 @@
+### Crear tarea
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar Node",
+  "completada": false
+}
+
+### Crear tarea duplicada (error esperado)
+POST http://localhost:3000/tareas
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar Node",
+  "completada": false
+}
+
+### Listar todas las tareas
+GET http://localhost:3000/tareas
+
+### Listar solo tareas completadas
+GET http://localhost:3000/tareas?estado=true
+
+### Listar solo tareas pendientes
+GET http://localhost:3000/tareas?estado=false
+
+### Consultar una tarea por nombre
+GET http://localhost:3000/tareas/Estudiar%20Node
+
+### Modificar tarea (marcar como completada)
+PUT http://localhost:3000/tareas/Estudiar%20Node
+Content-Type: application/json
+
+{
+  "completada": true
+}
+
+### Eliminar tarea
+DELETE http://localhost:3000/tareas/Estudiar%20Node
